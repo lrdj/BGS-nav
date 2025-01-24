@@ -1,0 +1,26 @@
+
+<div class="govuk-service-navigation"
+  data-module="govuk-service-navigation">
+  <div class="govuk-width-container">
+    <div class="govuk-service-navigation__container">
+
+		<nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+		  <ul class="govuk-service-navigation__list">
+			{% for link in navigationLinks %}
+			  <li class="govuk-service-navigation__item{% if link.active %} govuk-service-navigation__item--active{% endif %}">
+				<a class="govuk-service-navigation__link" href="{{ link.href }}"
+				   {% if link.active %}aria-current="true"{% endif %}>
+				  {% if link.active %}
+					<strong class="govuk-service-navigation__active-fallback">{{ link.text }}</strong>
+				  {% else %}
+					{{ link.text }}
+				  {% endif %}
+				</a>
+			  </li>
+			{% endfor %}
+		  </ul>
+		</nav>
+
+    </div>
+  </div>
+</div>
