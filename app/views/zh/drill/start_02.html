@@ -1,0 +1,127 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block header %}
+{% include "partials/nav-primary.html" %}
+{% endblock %}
+
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>h2.govuk-heading-l {margin-top:1.5em;}</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+	  <h1 class="govuk-heading-xl">Next steps for you</h1>
+<form>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--l" for="event-name">
+    Where are you based?
+  </label>
+  <div id="event-name-hint" class="govuk-hint">
+    What country
+  </div>
+  <input class="govuk-input" id="country" name="countryName" type="text">
+  <div id="event-name-hint" class="govuk-hint">
+    Postcode if in the UK
+  </div>
+  <input class="govuk-input govuk-input--width-10" id="postcode" name="postcodeName" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="account-number">
+      What is your account number?
+    </label>
+  </h1>
+  <div id="account-number-hint" class="govuk-hint">
+    Must be between 6 and 8 digits long
+  </div>
+  <input class="govuk-input govuk-input--width-10" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+</div>
+
+
+
+
+
+
+<a href="#" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">Continue</a>
+
+</form>
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+	<h2 class="govuk-heading-l">Starting a business: the essentials</h2>
+	<div style="display: grid;grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));gap: 10px;">
+		<div>
+			<img src="/public/images/guide.svg">
+			<h3 class="govuk-heading-m"><a href="#bt1">Getting started guide</a></h3>
+			<p class="govuk-body">Discover practical steps to register, plan, and launch your business with confidence using our essential guide.</p>
+		</div>
+		<div>
+			<img src="/public/images/guide.svg">
+			<h3 class="govuk-heading-m"><a href="#bt1">Mentoring and networking</a></h3>
+			<p class="govuk-body">Connect with experienced mentors and build valuable networks to gain insights, guidance, and opportunities for your business journey.</p>
+		</div>
+	</div>
+  </div>
+</div>
+
+
+<h2 class="govuk-heading-l">Top tips from businesses</h2>
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">John Preston - Tech Entrepreneur</h3>
+  <p class="govuk-body"><a href="#tip-1">Start small, test your idea, and grow gradually</a></p>
+  <p class="govuk-body">Building prototypes and testing with real customers helped us refine our product and launch successfully.</p>
+</div>
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">Samantha Green - Retail Owner</h3>
+  <p class="govuk-body"><a href="#tip-2">Understand your market before you start</a></p>
+  <p class="govuk-body">Speaking to customers early gave us insight into what people wanted, which shaped our business plan.</p>
+</div>
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">Sachin Khan - Food Business Founder</h3>
+  <p class="govuk-body"><a href="#tip-3">Don’t be afraid to seek advice</a></p>
+  <p class="govuk-body">Connecting with local business support groups gave me confidence and helped me navigate early challenges.</p>
+</div>
+
+</div>
+
+
+
+
+
+<h2 class="govuk-heading-l">Talk to business advisors for free</h2>
+
+<p class="govuk-body">Contact our advisor team of experts by phone, email or online. We're here to help you find the information you need to start, run, or grow your business.</p>
+
+<p class="govuk-body"><a href="#44"> > Contact the business support service</a></p>
+
+
+
+
+
+
+{% endblock %}
+
+
+
+{% block footer %}
+{% include "partials/nav-footer.html" %}
+{% endblock %}
+
+

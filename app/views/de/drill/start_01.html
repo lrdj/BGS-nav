@@ -1,0 +1,165 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block header %}
+{% include "partials/nav-primary-de.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Unbranded-Seitenvorlage – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>h2.govuk-heading-l {margin-top:1.5em;}</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+	  <h1 class="govuk-heading-xl">Starten Sie Ihre unternehmerische Reise</h1>
+
+<form action="/drill/start_02" method="post">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      Erzählen Sie uns von Ihrer aktuellen Phase, um die passende Unterstützung zu finden
+    </legend>
+    <div id="bizJourneyStage-hint" class="govuk-hint">
+      Wählen Sie alle Optionen aus, die auf Sie zutreffen
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-1" name="stage" type="checkbox" value="idea">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-1">Ich habe mein Unternehmen registriert</label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-2" name="stage" type="checkbox" value="startup">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-2">Ich habe einen Businessplan erstellt</label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-3" name="stage" type="checkbox" value="growth">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-3">Ich habe eine Finanzierung gesichert</label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-4" name="stage" type="checkbox" value="scaling">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-4">Ich habe einen Buchhalter</label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-5" name="stage" type="checkbox" value="exporting">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-5">Ich habe mit dem Handel begonnen</label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input 
+          class="govuk-checkboxes__input" 
+          id="stage-6" 
+          name="stage" 
+          type="checkbox" 
+          value="spoken-to-support-providers" 
+          data-aria-controls="conditional-stage-6">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-6">Ich habe mit Unterstützungsanbietern gesprochen</label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-stage-6">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="local-growth-hub" name="providers" type="checkbox" value="Local Growth Hub">
+              <label class="govuk-label govuk-checkboxes__label" for="local-growth-hub">Lokales Wachstumszentrum</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="chamber-commerce" name="providers" type="checkbox" value="Chamber of Commerce">
+              <label class="govuk-label govuk-checkboxes__label" for="chamber-commerce">Handelskammer</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="trade-bodies" name="providers" type="checkbox" value="Trade bodies">
+              <label class="govuk-label govuk-checkboxes__label" for="trade-bodies">Fachverbände</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input 
+                class="govuk-checkboxes__input" 
+                id="provider-other" 
+                name="providers" 
+                type="checkbox" 
+                value="Other" 
+                data-aria-controls="conditional-provider-other">
+              <label class="govuk-label govuk-checkboxes__label" for="provider-other">Andere</label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-provider-other">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="provider-other-details">
+                  Mit wem haben Sie bisher gesprochen? (Dies hilft uns zu beraten, mit wem Sie noch sprechen können)
+                </label>
+                <input 
+                  class="govuk-input govuk-!-width-three-quarters" 
+                  id="provider-other-details" 
+                  name="otherProviderDetails" 
+                  type="text" 
+                  spellcheck="false">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">Speichern und fortfahren</button>
+
+</form>
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+	<h2 class="govuk-heading-l">Ein Unternehmen gründen: Die Grundlagen</h2>
+	<div style="display: grid;grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));gap: 10px;">
+		<div>
+			<img src="/public/images/guide.svg">
+			<h3 class="govuk-heading-m"><a href="#bt1">Anleitung für den Einstieg</a></h3>
+			<p class="govuk-body">Entdecken Sie praktische Schritte zur Registrierung, Planung und Gründung Ihres Unternehmens mit unserem Leitfaden.</p>
+		</div>
+		<div>
+			<img src="/public/images/guide.svg">
+			<h3 class="govuk-heading-m"><a href="#bt1">Mentoring und Networking</a></h3>
+			<p class="govuk-body">Verbinden Sie sich mit erfahrenen Mentoren und bauen Sie wertvolle Netzwerke auf, um Einsichten, Unterstützung und Möglichkeiten zu erhalten.</p>
+		</div>
+	</div>
+  </div>
+</div>
+
+<h2 class="govuk-heading-l">Top-Tipps von Unternehmen</h2>
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">John Preston - Technologieunternehmer</h3>
+  <p class="govuk-body"><a href="#tip-1">Klein anfangen, Idee testen und allmählich wachsen</a></p>
+  <p class="govuk-body">Prototypen erstellen und mit echten Kunden testen half uns, unser Produkt zu verfeinern und erfolgreich zu starten.</p>
+</div>
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">Samantha Green - Einzelhandelsinhaberin</h3>
+  <p class="govuk-body"><a href="#tip-2">Verstehen Sie Ihren Markt, bevor Sie starten</a></p>
+  <p class="govuk-body">Gespräche mit Kunden halfen uns, die Wünsche der Leute zu verstehen und unseren Geschäftsplan entsprechend anzupassen.</p>
+</div>
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">Sachin Khan - Gründer eines Lebensmittelunternehmens</h3>
+  <p class="govuk-body"><a href="#tip-3">Haben Sie keine Angst, um Rat zu fragen</a></p>
+  <p class="govuk-body">Die Verbindung mit lokalen Unternehmensunterstützungsgruppen gab mir Vertrauen und half mir, frühe Herausforderungen zu meistern.</p>
+</div>
+
+</div>
+
+<h2 class="govuk-heading-l">Kostenlos mit Unternehmensberatern sprechen</h2>
+
+<p class="govuk-body">Kontaktieren Sie unser Expertenteam telefonisch, per E-Mail oder online. Wir helfen Ihnen, die Informationen zu finden, die Sie benötigen, um Ihr Unternehmen zu starten, zu führen oder auszubauen.</p>
+
+<p class="govuk-body"><a href="#44"> > Kontaktieren Sie den Unternehmensunterstützungsdienst</a></p>
+
+{% endblock %}
+
+{% block footer %}
+{% include "partials/nav-footer.html" %}
+{% endblock %}
