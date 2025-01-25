@@ -1,0 +1,122 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block header %}
+{% include "partials/nav-primary.html" %}
+
+{% endblock %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>h2.govuk-heading-l {margin-top:1.5em;}</style>
+
+<div class="govuk-grid-row" style="background:#000;padding:3em;">
+  <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-xl" style="color:white;">
+        Sind Sie hier, um Unterstützung beim Start, Ausbau und Wachstum Ihres Unternehmens zu erhalten?
+      </h1>
+
+<form action="/drill/start_01" method="post">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading" style="color:white;">Ich suche Hilfe bei...</h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="imLookingFor" name="imLookingFor" type="radio" value="england" style="color:white;">
+        <label class="govuk-label govuk-radios__label" for="imLookingFor" style="color:white;">
+          Mein Unternehmen gründen
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="imLookingFor-2" name="imLookingFor" type="radio" value="scotland" style="color:white;">
+        <label class="govuk-label govuk-radios__label" for="imLookingFor-2" style="color:white;">
+          Mein Unternehmen wachsen lassen
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="imLookingFor-3" name="imLookingFor" type="radio" value="wales" style="color:white;">
+        <label class="govuk-label govuk-radios__label" for="imLookingFor-3" style="color:white;">
+          Regelungen für mein Unternehmen verstehen
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+ <button type="submit" class="govuk-button govuk-button--start" data-module="govuk-button" style="color:black;background:white;">
+    Jetzt starten
+    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+    </svg>
+  </button>
+  
+  </form>
+
+  </div>
+</div>
+
+<style>
+.left-icon {width:4em;float:left;margin-right:1em;}
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    <h2 class="govuk-heading-l">
+        Wie wir Sie auf Ihrem Weg zum Erfolg unterstützen können</h2>
+
+    <img src="/public/images/map-point.svg" class="left-icon">
+    <h3 class="govuk-heading-m">Persönliche Unterstützung</h3>
+    <p class="govuk-body">Erhalten Sie maßgeschneiderte, persönliche Unterstützung von unseren Experten. Ob durch Workshops, Handelsveranstaltungen oder Beratungen – wir sind hier, um Ihnen zu helfen, zu wachsen, neue Märkte zu erschließen und Ihre Geschäftsziele zu erreichen.</p>
+    <img src="/public/images/world.svg" class="left-icon">
+    <h3 class="govuk-heading-m">Hilfe, um relevante Unterstützung und nützliche Organisationen zu finden</h3>
+    <p class="govuk-body">Wir verbinden Sie mit den richtigen Dienstleistungen und vertrauenswürdigen Organisationen, um Ihre Geschäftsreise zu unterstützen – von Finanzierungsmöglichkeiten bis hin zu Expertenberatung, die auf Ihre Ziele zugeschnitten ist.</p>
+    <img src="/public/images/events.svg" class="left-icon">
+    <h3 class="govuk-heading-m">Veranstaltungen, Videos und Leitfäden</h3>      
+    <p class="govuk-body">Entdecken Sie eine Vielzahl von Ressourcen, darunter Live-Veranstaltungen, Expertenvideos und umfassende Leitfäden. Alles ist darauf ausgelegt, Ihnen das Wissen, die Fähigkeiten und das Selbstvertrauen zu geben, Ihr Unternehmen wachsen zu lassen.</p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  
+    <h2 class="govuk-heading-l">Themen und Leitfäden durchsuchen (Allgemeine Inhalte)</h2>
+    
+    <div style="display: grid;grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));gap: 10px;">
+        <div>
+            <img src="/public/images/guide.svg">
+            <h3 class="govuk-heading-m"><a href="#bt1">Geschäfte international tätigen</a></h3>
+            <p class="govuk-body">Erhalten Sie wichtige Anleitungen, Ressourcen und Unterstützung, um mit Ihrem Unternehmen auf globalen Märkten erfolgreich zu sein.</p>
+        </div>
+        <div>
+            <img src="/public/images/guide.svg">
+            <h3 class="govuk-heading-m"><a href="#bt1">Investieren in Großbritannien</a></h3>
+            <p class="govuk-body">Entdecken Sie Möglichkeiten, Anreize und Unterstützung, um Ihre Investitionen erfolgreich in Großbritannien zu etablieren und auszubauen.</p>
+        </div>
+        <div>
+            <img src="/public/images/guide.svg">
+            <h3 class="govuk-heading-m"><a href="#bt1">Finanzierung und Fördermittel</a></h3>
+            <p class="govuk-body">Finden Sie Anleitungen zur Sicherung von Finanzmitteln, zur Nutzung von Fördermöglichkeiten und zum Management des finanziellen Wachstums Ihres Unternehmens.</p>
+        </div>
+        <div>
+            <img src="/public/images/guide.svg">
+            <h3 class="govuk-heading-m"><a href="#bt1">Digitale Technologien nutzen</a></h3>
+            <p class="govuk-body">Erfahren Sie, wie digitale Tools und Technologien die Produktivität steigern, Abläufe optimieren und Wachstum fördern können.</p>
+        </div>
+    </div>
+  
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "partials/nav-footer.html" %}
+{% endblock %}

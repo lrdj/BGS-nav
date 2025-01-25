@@ -1,0 +1,121 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block header %}
+{% include "partials/nav-primary.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>h2.govuk-heading-l {margin-top:1.5em;}</style>
+
+<div class="govuk-grid-row" style="background:#000;padding:3em;">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl" style="color:white;">
+        您是否在尋找金融助力，以帮助您创始，扩展，并保持您的业务增长？
+      </h1>
+
+<form action="/drill/start_01" method="post">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading" style="color:white;">我需要帮助...</h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="imLookingFor" name="imLookingFor" type="radio" value="england" style="color:white;">
+        <label class="govuk-label govuk-radios__label" for="imLookingFor" style="color:white;">
+          创始我的业务
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="imLookingFor-2" name="imLookingFor" type="radio" value="scotland" style="color:white;">
+        <label class="govuk-label govuk-radios__label" for="imLookingFor-2" style="color:white;">
+          扩展我的业务
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="imLookingFor-3" name="imLookingFor" type="radio" value="wales" style="color:white;">
+        <label class="govuk-label govuk-radios__label" for="imLookingFor-3" style="color:white;">
+          了解关于我业务的规定
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+ <button type="submit" class="govuk-button govuk-button--start" data-module="govuk-button" style="color:black;background:white;">
+    现在开始
+    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+    </svg>
+  </button>
+  
+  </form>
+
+  </div>
+</div>
+
+<style>
+.left-icon {width:4em;float:left;margin-right:1em;}
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    <h2 class="govuk-heading-l">
+        我们如何帮助您进入成功之路</h2>
+
+    <img src="/public/images/map-point.svg" class="left-icon">
+    <h3 class="govuk-heading-m">个性化支持</h3>
+    <p class="govuk-body">获得专属于您的面对面支持。无论是通过专题课程，贸易事件，还是议认，我们不介于您扩展，进入新市场，实现您的商业目标。</p>
+    <img src="/public/images/world.svg" class="left-icon">
+    <h3 class="govuk-heading-m">帮助找到相关支持和信誉极高的机构</h3>
+    <p class="govuk-body">我们将您与适合的服务和信誉极高的机构连接，从资金机会到重点指导，帮助您在商业路径上进一步前进。</p>
+    <img src="/public/images/events.svg" class="left-icon">
+    <h3 class="govuk-heading-m">活动，视频和指南</h3>      
+    <p class="govuk-body">发现丰富的资源，包括直播活动，专家视频，以及全面的指南。每一项都是为了配备您知识，技能，和信心，实现您的业务增长。</p>
+
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+  
+    <h2 class="govuk-heading-l">涉及主题和指南（一般内容）</h2>
+    
+    <div style="display: grid;grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));gap: 10px;">
+        <div>
+            <img src="/public/images/guide.svg">
+            <h3 class="govuk-heading-m"><a href="#bt1">国际商业</a></h3>
+            <p class="govuk-body">获得重要的指南，资源，以及支持，帮助您在全球市场中取得成功。</p>
+        </div>
+        <div>
+            <img src="/public/images/guide.svg">
+            <h3 class="govuk-heading-m"><a href="#bt1">在英国投资</a></h3>
+            <p class="govuk-body">发现机会，制度和支持，成功地在英国实现您的投资事业增长。</p>
+        </div>
+        <div>
+            <img src="/public/images/guide.svg">
+            <h3 class="govuk-heading-m"><a href="#bt1">资金和融资</a></h3>
+            <p class="govuk-body">找到获取资金，利用融资机会，以及管理您业务的资金增长的指南。</p>
+        </div>
+        <div>
+            <img src="/public/images/guide.svg">
+            <h3 class="govuk-heading-m"><a href="#bt1">使用数字化技术</a></h3>
+            <p class="govuk-body">了解数字工具和技术如何提高生产力，简化操作，并促进增长。</p>
+        </div>
+    </div>
+  
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% include "partials/nav-footer.html" %}
+{% endblock %}
