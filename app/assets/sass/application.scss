@@ -4,3 +4,19 @@
 // 
 
 // Add extra styles here
+
+
+.carla-triage {
+  background: black;
+  color: white;
+
+  // Base (mobile) spacing
+  padding: govuk-spacing(1);
+  padding-top: govuk-spacing(3);
+
+  // Use a GOV.UK Design System media query to increase padding on larger screens
+  @include govuk-media-query("tablet") {
+    padding: govuk-spacing(6);
+  }
+}
+
