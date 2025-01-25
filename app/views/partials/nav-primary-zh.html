@@ -1,20 +1,28 @@
 {% set navigationLinks = [
   { text: "创业", href: "/start" },
   { text: "获得资金", href: "/funds" },
-  { text: "出口海外", href: "/export" },
   { text: "在英国投资", href: "/invest" },
   { text: "提升技能", href: "/cpd" }
 ] %}
 
-<div class="govuk-service-navigation" data-module="govuk-service-navigation">
+<section aria-label="Service information" class="govuk-service-navigation"
+  data-module="govuk-service-navigation">
   <div class="govuk-width-container">
-    <div style="font-size:x-large;font-weight:bold;padding:1em 0 0.25em 0;">
-      <a href="/">[sitename.gov.uk]</a>
-    </div>
-
     <div class="govuk-service-navigation__container">
+
+      <span class="govuk-service-navigation__service-name">
+        <a href="/" class="govuk-service-navigation__link">
+          [sitename.gov.uk]
+        </a>
+      </span>
+
       <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
-        <ul class="govuk-service-navigation__list">
+
+        <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+          菜单
+        </button>
+
+        <ul class="govuk-service-navigation__list" id="navigation">
           {% for link in navigationLinks %}
             <li class="govuk-service-navigation__item{% if link.href == currentPath %} govuk-service-navigation__item--active{% endif %}">
               <a class="govuk-service-navigation__link" href="{{ link.href }}"
@@ -29,6 +37,7 @@
           {% endfor %}
         </ul>
       </nav>
+
     </div>
   </div>
-</div>
+</section>
