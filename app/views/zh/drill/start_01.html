@@ -1,56 +1,52 @@
 {% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
 {% block header %}
-{% include "partials/nav-primary.html" %}
+{% include "partials/nav-primary-zh.html" %}
 {% endblock %}
 
-
 {% block pageTitle %}
-  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+  未命名页面模板 – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
 
 <style>h2.govuk-heading-l {margin-top:1.5em;}</style>
 
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-	  <h1 class="govuk-heading-xl">Starting your business journey</h1>
+	  <h1 class="govuk-heading-xl">开始您的创业之旅</h1>
 
 <form action="/drill/start_02" method="post">
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      Tell us about the stage you're at to find the right support
+      告诉我们您目前所处的阶段，以便找到适合您的支持
     </legend>
     <div id="bizJourneyStage-hint" class="govuk-hint">
-      Select all options that are relevant to you
+      选择所有适合您的选项
     </div>
     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <!-- First 5 checkboxes (normal) -->
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="stage-1" name="stage" type="checkbox" value="idea">
-        <label class="govuk-label govuk-checkboxes__label" for="stage-1">I have registered my business</label>
+        <label class="govuk-label govuk-checkboxes__label" for="stage-1">我已经注册了我的公司</label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="stage-2" name="stage" type="checkbox" value="startup">
-        <label class="govuk-label govuk-checkboxes__label" for="stage-2">I have created a business plan</label>
+        <label class="govuk-label govuk-checkboxes__label" for="stage-2">我已经创建了商业计划</label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="stage-3" name="stage" type="checkbox" value="growth">
-        <label class="govuk-label govuk-checkboxes__label" for="stage-3">I have secured funding</label>
+        <label class="govuk-label govuk-checkboxes__label" for="stage-3">我已经获得了融资</label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="stage-4" name="stage" type="checkbox" value="scaling">
-        <label class="govuk-label govuk-checkboxes__label" for="stage-4">I have an accountant</label>
+        <label class="govuk-label govuk-checkboxes__label" for="stage-4">我有一位会计师</label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="stage-5" name="stage" type="checkbox" value="exporting">
-        <label class="govuk-label govuk-checkboxes__label" for="stage-5">I've started trading</label>
+        <label class="govuk-label govuk-checkboxes__label" for="stage-5">我已经开始交易</label>
       </div>
 
-      <!-- 6th checkbox with nested conditional checkboxes -->
       <div class="govuk-checkboxes__item">
         <input 
           class="govuk-checkboxes__input" 
@@ -59,25 +55,23 @@
           type="checkbox" 
           value="spoken-to-support-providers" 
           data-aria-controls="conditional-stage-6">
-        <label class="govuk-label govuk-checkboxes__label" for="stage-6">I've spoken to support providers</label>
+        <label class="govuk-label govuk-checkboxes__label" for="stage-6">我已经与支持机构沟通过</label>
       </div>
       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-stage-6">
         <div class="govuk-form-group">
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <!-- Nested checkboxes -->
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="local-growth-hub" name="providers" type="checkbox" value="Local Growth Hub">
-              <label class="govuk-label govuk-checkboxes__label" for="local-growth-hub">Local Growth Hub</label>
+              <label class="govuk-label govuk-checkboxes__label" for="local-growth-hub">本地增长中心</label>
             </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="chamber-commerce" name="providers" type="checkbox" value="Chamber of Commerce">
-              <label class="govuk-label govuk-checkboxes__label" for="chamber-commerce">Chamber of Commerce</label>
+              <label class="govuk-label govuk-checkboxes__label" for="chamber-commerce">商会</label>
             </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="trade-bodies" name="providers" type="checkbox" value="Trade bodies">
-              <label class="govuk-label govuk-checkboxes__label" for="trade-bodies">Trade bodies</label>
+              <label class="govuk-label govuk-checkboxes__label" for="trade-bodies">行业协会</label>
             </div>
-            <!-- "Other" checkbox with further reveal -->
             <div class="govuk-checkboxes__item">
               <input 
                 class="govuk-checkboxes__input" 
@@ -86,12 +80,12 @@
                 type="checkbox" 
                 value="Other" 
                 data-aria-controls="conditional-provider-other">
-              <label class="govuk-label govuk-checkboxes__label" for="provider-other">Other</label>
+              <label class="govuk-label govuk-checkboxes__label" for="provider-other">其他</label>
             </div>
             <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-provider-other">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="provider-other-details">
-                  Who have you spoken to so far? (This will help us advise who else to speak to)
+                  您目前已经与谁沟通过？（这将帮助我们为您提供进一步建议）
                 </label>
                 <input 
                   class="govuk-input govuk-!-width-three-quarters" 
@@ -108,7 +102,7 @@
   </fieldset>
 </div>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">Save and continue</button>
+<button type="submit" class="govuk-button" data-module="govuk-button">保存并继续</button>
 
 </form>
 
@@ -118,68 +112,54 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-	<h2 class="govuk-heading-l">Starting a business: the essentials</h2>
+	<h2 class="govuk-heading-l">创业的基本步骤</h2>
 	<div style="display: grid;grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));gap: 10px;">
 		<div>
 			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Getting started guide</a></h3>
-			<p class="govuk-body">Discover practical steps to register, plan, and launch your business with confidence using our essential guide.</p>
+			<h3 class="govuk-heading-m"><a href="#bt1">入门指南</a></h3>
+			<p class="govuk-body">通过我们的基本指南，了解注册、规划和启动业务的实用步骤。</p>
 		</div>
 		<div>
 			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Mentoring and networking</a></h3>
-			<p class="govuk-body">Connect with experienced mentors and build valuable networks to gain insights, guidance, and opportunities for your business journey.</p>
+			<h3 class="govuk-heading-m"><a href="#bt1">指导与人脉网络</a></h3>
+			<p class="govuk-body">与经验丰富的导师建立联系，构建有价值的网络，获得洞察力、指导和机会。</p>
 		</div>
 	</div>
   </div>
 </div>
 
-
-<h2 class="govuk-heading-l">Top tips from businesses</h2>
+<h2 class="govuk-heading-l">来自企业的成功建议</h2>
 
 <div class="govuk-grid-row">
 
 <div class="govuk-grid-column-one-third">
-  <h3 class="govuk-heading-m">John Preston - Tech Entrepreneur</h3>
-  <p class="govuk-body"><a href="#tip-1">Start small, test your idea, and grow gradually</a></p>
-  <p class="govuk-body">Building prototypes and testing with real customers helped us refine our product and launch successfully.</p>
+  <h3 class="govuk-heading-m">John Preston - 技术企业家</h3>
+  <p class="govuk-body"><a href="#tip-1">从小做起，测试您的想法，并逐步发展</a></p>
+  <p class="govuk-body">构建原型并与真实客户测试帮助我们优化产品并成功推出。</p>
 </div>
 
 <div class="govuk-grid-column-one-third">
-  <h3 class="govuk-heading-m">Samantha Green - Retail Owner</h3>
-  <p class="govuk-body"><a href="#tip-2">Understand your market before you start</a></p>
-  <p class="govuk-body">Speaking to customers early gave us insight into what people wanted, which shaped our business plan.</p>
+  <h3 class="govuk-heading-m">Samantha Green - 零售店主</h3>
+  <p class="govuk-body"><a href="#tip-2">在创业之前了解您的市场</a></p>
+  <p class="govuk-body">与客户的早期沟通帮助我们了解人们的需求，并据此制定业务计划。</p>
 </div>
 
 <div class="govuk-grid-column-one-third">
-  <h3 class="govuk-heading-m">Sachin Khan - Food Business Founder</h3>
-  <p class="govuk-body"><a href="#tip-3">Don’t be afraid to seek advice</a></p>
-  <p class="govuk-body">Connecting with local business support groups gave me confidence and helped me navigate early challenges.</p>
+  <h3 class="govuk-heading-m">Sachin Khan - 餐饮企业创始人</h3>
+  <p class="govuk-body"><a href="#tip-3">不要害怕寻求建议</a></p>
+  <p class="govuk-body">与本地商业支持小组的联系增强了我的信心，并帮助我应对早期的挑战。</p>
 </div>
 
 </div>
 
+<h2 class="govuk-heading-l">免费与商业顾问交谈</h2>
 
+<p class="govuk-body">通过电话、电子邮件或在线方式联系我们的专家团队。我们将帮助您找到启动、运营或发展业务所需的信息。</p>
 
-
-
-<h2 class="govuk-heading-l">Talk to business advisors for free</h2>
-
-<p class="govuk-body">Contact our advisor team of experts by phone, email or online. We're here to help you find the information you need to start, run, or grow your business.</p>
-
-<p class="govuk-body"><a href="#44"> > Contact the business support service</a></p>
-
-
-
-
-
+<p class="govuk-body"><a href="#44"> > 联系商业支持服务</a></p>
 
 {% endblock %}
-
-
 
 {% block footer %}
 {% include "partials/nav-footer.html" %}
 {% endblock %}
-
-
