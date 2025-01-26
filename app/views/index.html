@@ -1,9 +1,5 @@
 {% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
-{% block header %}
-{% include "partials/nav-primary.html" %}
-{% endblock %}
-
 
 {% block pageTitle %}
 Wireframe - NOT A DESIGN
@@ -11,120 +7,27 @@ Wireframe - NOT A DESIGN
 
 {% block content %}
 
-<style>h2.govuk-heading-l {margin-top:1.5em;}</style>
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
-<!-- div class="govuk-grid-row" style="background:#000;padding:3em;" -->
+        <h1 class="govuk-heading-xl">BGS Triage and stitching explorations</h1>
+        <p class="govuk-body-l">Basic click-through to show possible structures. This IS NOT A UI DESIGN it's a wireframe schematic, brand and look and feel are to come.</p>
 
-<div class="govuk-grid-row carla-triage">
-  <div class="govuk-grid-column-three-quarters">
-	  <h1 class="govuk-heading-xl" style="color:white;">
-		Are you here to get help starting, expanding and growing your business?
-	  </h1>
+		<p class="govuk-body">Current flows:</p>
+		<ul class="govuk-list govuk-list--bullet">
+		  <li><a href="start-flow01.html">Triage - shown via radios</a></li>
+		  <li><a href="start-flow02.html">Triage - via autocomplete</a></li>
+		  <li><a href="/de/index.html">Triage start page - German</a></li>
+		  <li><a href="/zh/index.html">Triage start page - Mandarin</a></li>
+		</ul>
 
-<form action="/drill/start_01" method="post">
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading" style="color:white;">I'm looking for help with...</h1>
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor" name="imLookingFor" type="radio" value="england" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor" style="color:white;">
-          Starting my business
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor-2" name="imLookingFor" type="radio" value="scotland" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor-2" style="color:white;">
-          Growing my business
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor-3" name="imLookingFor" type="radio" value="wales" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor-3" style="color:white;">
-          Understanding regulations for my business
-        </label>
       </div>
     </div>
-  </fieldset>
+  </main>
 </div>
 
- <button type="submit" class="govuk-button govuk-button--start" data-module="govuk-button" style="color:black;background:white;">
-    Get it now
-    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-    </svg>
-  </button>
-  
-  </form>
-
-  </div>
-</div>
-
-<style>
-.left-icon {width:4em;float:left;margin-right:1em;}
-</style>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-  
-	<h2 class="govuk-heading-l">
-		How we can support you on your path to success</h2>
-
-	<img src="/public/images/map-point.svg" class="left-icon">
-	<h3 class="govuk-heading-m">In person support</h3>
-	<p class="govuk-body">Get tailored, face-to-face support from our experts. Whether through workshops, trade events, or consultations, we’re here to help you grow, expand into new markets, and achieve your business goals.</p>
-	<img src="/public/images/world.svg" class="left-icon">
-	<h3 class="govuk-heading-m">Help to find relevant support and useful organisations</h3>
-	<p class="govuk-body">We’ll connect you with the right services and trusted organisations to support your business journey, from funding opportunities to expert advice tailored to your goals seize new.</p>
-	<img src="/public/images/events.svg" class="left-icon">
-	<h3 class="govuk-heading-m">Events, videos and guides</h3>		
-	<p class="govuk-body">Discover a wealth of resources, including live events, expert-led videos, and comprehensive guides. Each is designed to equip you with the knowledge, skills, and confidence to grow your business and.</p>
-
-  </div>
-</div>
-
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-  
-	<h2 class="govuk-heading-l">Browse topics and guides (Generic content)</h2>
-	
-	<div style="display: grid;grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));gap: 10px;">
-		<div>
-			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Doing business internationally</a></h3>
-			<p class="govuk-body">Access essential guidance, resources, and support to help your business succeed in global markets.</p>
-		</div>
-		<div>
-			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Investing in the UK</a></h3>
-			<p class="govuk-body">Discover opportunities, incentives, and support to successfully establish and grow your investment in the UK.</p>
-		</div>
-		<div>
-			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Finance and funding</a></h3>
-			<p class="govuk-body">Find guidance on securing finance, accessing funding opportunities, and managing your business’s financial growth.</p>
-		</div>
-		<div>
-			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Using digital technologies</a></h3>
-			<p class="govuk-body">Learn how digital tools and technologies can boost productivity, streamline operations, and drive growth.</p>
-		</div>
-	</div>
-	
-
-  </div>
-</div>
-
-
-{% endblock %}
-
-
-
-{% block footer %}
-{% include "partials/nav-footer.html" %}
 {% endblock %}
 
 

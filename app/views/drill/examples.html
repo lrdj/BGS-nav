@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessible Autocomplete examples</title>
+    <style>
+      /* Example page specific styling. */
+      html {
+        color: #111;
+        background: #FFF;
+        font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        line-height: normal;
+      }
+
+      label {
+        display: block;
+        margin-bottom: .5rem;
+      }
+
+      code {
+        padding-left: .5em;
+        padding-right: .5em;
+        background: #EFEFEF;
+        font-weight: normal;
+        font-family: monospace;
+      }
+
+      main {
+        max-width: 40em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .autocomplete-wrapper {
+        max-width: 20em;
+        margin-bottom: 4rem;
+      }
+
+      /* Custom classes for the `XYZClasses` props with visual changes to see their effect without inspecting */ 
+      .app-input {
+        /* Adjust the font to check that both hint and input get the class by default,
+           to ensure the hint suggestion exactly aligns with the typed input text */
+        font-family: serif;
+      }
+
+      .app-hint {
+        box-shadow: inset 0 0 0 5px #44952e;
+      }
+
+      .custom-menu-class {
+        box-shadow: 0 3px 0 0 #fd0, 3px 3px 0 0 #fd0, -3px 3px 0 0 #fd0;
+      }
+    </style>
+    
+{% include "partials/autocomp-css.html" %}
+
+  </head>
+  <body>
+    <main>
+
+      <h3>Minlength with placeholder</h3>
+
+      <label for="autocomplete-yourCountry">What country do you operate in?</label>
+      <div id="yourCountry" class="autocomplete-wrapper"></div>
+
+
+
+      <h3>Are you here to get help starting, expanding and growing your business?</h3>
+
+      <!-- label for="autocomplete-helpTriage">Country</label -->
+      <div id="helpTriage" class="autocomplete-wrapper"></div>
+
+    </main>
+
+{% block footer %}
+{% include "partials/autocomp-init.html" %}
+{% include "partials/autocomp-configs.html" %}
+{% endblock %}
+
+  </body>
+</html>
