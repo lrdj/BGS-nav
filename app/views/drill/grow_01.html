@@ -14,71 +14,103 @@ Wireframe - NOT A DESIGN
 <style>h2.govuk-heading-l {margin-top:1.5em;}</style>
 
 
-<div class="govuk-grid-row" style="background:#000;padding:3em;">
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-	  <h1 class="govuk-heading-xl" style="color:white;">
-		Are you here to get help starting, expanding and growing your business?
-	  </h1>
+	  <h1 class="govuk-heading-xl">Starting your business journey</h1>
 
-<form>
+<form action="/drill/start_02" method="post">
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading" style="color:white;">I'm looking for help with...</h1>
+      Tell us about the stage you're at to find the right support
     </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor" name="imLookingFor" type="radio" value="england" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor" style="color:white;">
-          Starting my business
-        </label>
+    <div id="bizJourneyStage-hint" class="govuk-hint">
+      Select all options that are relevant to you
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <!-- First 5 checkboxes (normal) -->
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-1" name="stage" type="checkbox" value="idea">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-1">I have registered my business</label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor-2" name="imLookingFor" type="radio" value="scotland" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor-2" style="color:white;">
-          Growing my business
-        </label>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-2" name="stage" type="checkbox" value="startup">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-2">I have created a business plan</label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor-3" name="imLookingFor" type="radio" value="wales" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor-3" style="color:white;">
-          Understanding regulations for my business
-        </label>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-3" name="stage" type="checkbox" value="growth">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-3">I have secured funding</label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-4" name="stage" type="checkbox" value="scaling">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-4">I have an accountant</label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="stage-5" name="stage" type="checkbox" value="exporting">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-5">I've started trading</label>
+      </div>
+
+      <!-- 6th checkbox with nested conditional checkboxes -->
+      <div class="govuk-checkboxes__item">
+        <input 
+          class="govuk-checkboxes__input" 
+          id="stage-6" 
+          name="stage" 
+          type="checkbox" 
+          value="spoken-to-support-providers" 
+          data-aria-controls="conditional-stage-6">
+        <label class="govuk-label govuk-checkboxes__label" for="stage-6">I've spoken to support providers</label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-stage-6">
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <!-- Nested checkboxes -->
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="local-growth-hub" name="providers" type="checkbox" value="Local Growth Hub">
+              <label class="govuk-label govuk-checkboxes__label" for="local-growth-hub">Local Growth Hub</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="chamber-commerce" name="providers" type="checkbox" value="Chamber of Commerce">
+              <label class="govuk-label govuk-checkboxes__label" for="chamber-commerce">Chamber of Commerce</label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="trade-bodies" name="providers" type="checkbox" value="Trade bodies">
+              <label class="govuk-label govuk-checkboxes__label" for="trade-bodies">Trade bodies</label>
+            </div>
+            <!-- "Other" checkbox with further reveal -->
+            <div class="govuk-checkboxes__item">
+              <input 
+                class="govuk-checkboxes__input" 
+                id="provider-other" 
+                name="providers" 
+                type="checkbox" 
+                value="Other" 
+                data-aria-controls="conditional-provider-other">
+              <label class="govuk-label govuk-checkboxes__label" for="provider-other">Other</label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-provider-other">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="provider-other-details">
+                  Who have you spoken to so far? (This will help us advise who else to speak to)
+                </label>
+                <input 
+                  class="govuk-input govuk-!-width-three-quarters" 
+                  id="provider-other-details" 
+                  name="otherProviderDetails" 
+                  type="text" 
+                  spellcheck="false">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </fieldset>
 </div>
 
-<a href="#" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button" style="color:black;background:white;">
-  Get it now
-  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-  </svg>
-</a>
-<form>
+<button type="submit" class="govuk-button" data-module="govuk-button">Save and continue</button>
 
-  </div>
-</div>
-
-<style>
-.left-icon {width:4em;float:left;margin-right:1em;}
-</style>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-  
-	<h2 class="govuk-heading-l">
-		How we can support you on your path to success</h2>
-
-	<img src="/public/images/map-point.svg" class="left-icon">
-	<h3 class="govuk-heading-m">In person support</h3>
-	<p class="govuk-body">Get tailored, face-to-face support from our experts. Whether through workshops, trade events, or consultations, we’re here to help you grow, expand into new markets, and achieve your business goals.</p>
-	<img src="/public/images/world.svg" class="left-icon">
-	<h3 class="govuk-heading-m">Help to find relevant support and useful organisations</h3>
-	<p class="govuk-body">We’ll connect you with the right services and trusted organisations to support your business journey, from funding opportunities to expert advice tailored to your goals seize new.</p>
-	<img src="/public/images/events.svg" class="left-icon">
-	<h3 class="govuk-heading-m">Events, videos and guides</h3>		
-	<p class="govuk-body">Discover a wealth of resources, including live events, expert-led videos, and comprehensive guides. Each is designed to equip you with the knowledge, skills, and confidence to grow your business and.</p>
+</form>
 
   </div>
 </div>
@@ -86,35 +118,60 @@ Wireframe - NOT A DESIGN
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-  
-	<h2 class="govuk-heading-l">Browse topics and guides (Generic content)</h2>
-	
+	<h2 class="govuk-heading-l">Starting a business: the essentials</h2>
 	<div style="display: grid;grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));gap: 10px;">
 		<div>
 			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Doing business internationally</a></h3>
-			<p class="govuk-body">Access essential guidance, resources, and support to help your business succeed in global markets.</p>
+			<h3 class="govuk-heading-m"><a href="#bt1">Getting started guide</a></h3>
+			<p class="govuk-body">Discover practical steps to register, plan, and launch your business with confidence using our essential guide.</p>
 		</div>
 		<div>
 			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Investing in the UK</a></h3>
-			<p class="govuk-body">Discover opportunities, incentives, and support to successfully establish and grow your investment in the UK.</p>
-		</div>
-		<div>
-			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Finance and funding</a></h3>
-			<p class="govuk-body">Find guidance on securing finance, accessing funding opportunities, and managing your business’s financial growth.</p>
-		</div>
-		<div>
-			<img src="/public/images/guide.svg">
-			<h3 class="govuk-heading-m"><a href="#bt1">Using digital technologies</a></h3>
-			<p class="govuk-body">Learn how digital tools and technologies can boost productivity, streamline operations, and drive growth.</p>
+			<h3 class="govuk-heading-m"><a href="#bt1">Mentoring and networking</a></h3>
+			<p class="govuk-body">Connect with experienced mentors and build valuable networks to gain insights, guidance, and opportunities for your business journey.</p>
 		</div>
 	</div>
-	
-
   </div>
 </div>
+
+
+<h2 class="govuk-heading-l">Top tips from businesses</h2>
+
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">John Preston - Tech Entrepreneur</h3>
+  <p class="govuk-body"><a href="#tip-1">Start small, test your idea, and grow gradually</a></p>
+  <p class="govuk-body">Building prototypes and testing with real customers helped us refine our product and launch successfully.</p>
+</div>
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">Samantha Green - Retail Owner</h3>
+  <p class="govuk-body"><a href="#tip-2">Understand your market before you start</a></p>
+  <p class="govuk-body">Speaking to customers early gave us insight into what people wanted, which shaped our business plan.</p>
+</div>
+
+<div class="govuk-grid-column-one-third">
+  <h3 class="govuk-heading-m">Sachin Khan - Food Business Founder</h3>
+  <p class="govuk-body"><a href="#tip-3">Don’t be afraid to seek advice</a></p>
+  <p class="govuk-body">Connecting with local business support groups gave me confidence and helped me navigate early challenges.</p>
+</div>
+
+</div>
+
+
+
+
+
+<h2 class="govuk-heading-l">Talk to business advisors for free</h2>
+
+<p class="govuk-body">Contact our advisor team of experts by phone, email or online. We're here to help you find the information you need to start, run, or grow your business.</p>
+
+<p class="govuk-body"><a href="#44"> > Contact the business support service</a></p>
+
+
+
+
 
 
 {% endblock %}
