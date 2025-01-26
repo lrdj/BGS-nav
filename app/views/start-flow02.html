@@ -11,6 +11,8 @@ Wireframe - NOT A DESIGN
 
 {% block content %}
 
+{% include "partials/autocomp-css.html" %}
+
 <style>h2.govuk-heading-l {margin-top:1.5em;}</style>
 
 <!-- div class="govuk-grid-row" style="background:#000;padding:3em;" -->
@@ -24,29 +26,7 @@ Wireframe - NOT A DESIGN
 <form action="/drill/start_01" method="post">
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading" style="color:white;">I'm looking for help with...</h1>
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor" name="imLookingFor" type="radio" value="england" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor" style="color:white;">
-          Starting my business
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor-2" name="imLookingFor" type="radio" value="scotland" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor-2" style="color:white;">
-          Growing my business
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="imLookingFor-3" name="imLookingFor" type="radio" value="wales" style="color:white;">
-        <label class="govuk-label govuk-radios__label" for="imLookingFor-3" style="color:white;">
-          Understanding regulations for my business
-        </label>
-      </div>
-    </div>
+    <div id="helpTriage" class="autocomplete-wrapper"></div>
   </fieldset>
 </div>
 
@@ -125,6 +105,8 @@ Wireframe - NOT A DESIGN
 
 {% block footer %}
 {% include "partials/nav-footer.html" %}
+{% include "partials/autocomp-init.html" %}
+{% include "partials/autocomp-configs.html" %}
 {% endblock %}
 
 
