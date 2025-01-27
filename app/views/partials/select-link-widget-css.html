@@ -1,0 +1,89 @@
+  <style>
+    .select-link-widget {
+      position: relative;
+      display: block; /* Ensure it fills the container */
+      width: 100%; /* Inherit the width from the parent column */
+      max-width: 100%; /* Prevent overflowing the column */
+      border: 1px solid black;
+      background: white;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box; /* Include padding/border in width */
+    }
+
+    .slw-legend {
+      all: unset; /* Reset styles for the button */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%; /* Ensure the button fills the parent width */
+      box-sizing: border-box; /* Include padding in width */
+    }
+
+    .slw-arrow {
+      display: flex;
+      align-items: center;
+      margin-left: 10px; /* Add spacing between text and caret */
+    }
+
+    .slw-arrow svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    /* Rotate arrow when expanded */
+    .slw-arrow[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+
+    /* Options list (initially hidden) */
+    .slw-options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none; /* Hidden by default */
+      position: static; /* Let it flow within the document */
+      width: 100%; /* Dropdown matches the container's width */
+      border: 1px solid black;
+      background: white;
+      box-sizing: border-box; /* Keep dropdown within the container */
+    }
+
+    /* Push content down when expanded */
+    .select-link-widget.expanded .slw-options {
+      display: block; /* Reveal the dropdown */
+      margin-top: 10px; /* Add spacing when expanded */
+    }
+
+    .slw-options li {
+      border-top: 1px solid black; /* Divider between options */
+    }
+
+    .slw-options a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+      overflow-wrap: break-word; /* Handle long text */
+      word-wrap: break-word; /* Legacy support */
+      hyphens: auto;
+    }
+
+    .slw-options a:hover {
+      background: black;
+      color: white;
+    }
+	
+	.slw-legend {
+	  color: #000; /* Override inherited colour for button text */
+	}
+	
+	.slw-arrow svg {
+	  fill: currentColor; /* Ensure caret matches the text colour */
+	  color: #000; /* Explicitly set caret colour to black */
+	}
+  </style>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Select Link Widget</title>
+  <link rel="stylesheet" href="https://govuk-frontend-production.apps.internal/stylesheets/govuk-frontend-4.6.0.min.css"> <!-- GOV.UK stylesheet -->
+</head>
+
+<body>
+
+{% include "partials/select-link-widget-css.html" %} 
+
+
+
+      <nav class="select-link-widget">
+        <button class="slw-legend" aria-expanded="false">
+          What are you looking for?
+          <span class="slw-arrow" aria-expanded="false">
+            <!-- SVG caret -->
+            <svg class="autocomplete__dropdown-arrow-down" viewBox="0 0 512 512">
+              <path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z" fill="currentColor" />
+            </svg>
+          </span>
+        </button>
+        <ul class="slw-options">
+          <li><a href="link1.html">First option</a></li>
+          <li><a href="link2.html">Second choice here</a></li>
+          <li><a href="link3.html">Another item</a></li>
+        </ul>
+      </nav>
+
+
+
+{% include "partials/select-link-widget.html" %} 
+
+</body>
+</html>

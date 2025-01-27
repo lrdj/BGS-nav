@@ -67,7 +67,43 @@
 
   </head>
   <body>
+  
+  
+  
+  test
+  
+  
+  
+  
+  
+  
+  
+  
+  
     <main>
+
+<style>
+  #country {
+    width: 100%;
+    padding: 0.5em;
+    font-size: x-large;
+    border:2px solid black;
+  }
+  #country::placeholder {
+    color: #000;
+    font-weight: bold;
+  }
+</style>
+
+<input list="countries" id="country" name="country" placeholder="What help are you looking for?" />
+<datalist id="countries">
+  <option value="Starting my business">
+  <option value="Growing my business">
+  <option value="Understanding regulations for my business">
+</datalist>
+
+
+
 
       <h3>Minlength with placeholder</h3>
 
@@ -80,6 +116,9 @@
 
       <!-- label for="autocomplete-helpTriage">Country</label -->
       <div id="helpTriage" class="autocomplete-wrapper"></div>
+
+
+
 
     </main>
 

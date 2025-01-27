@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Link Widget</title>
+  <style>
+    /* Base styles */
+    .select-link-widget {
+      position: relative;
+      display: inline-block;
+      border: 1px solid black;
+      background: white;
+      width: 300px; /* Adjust as needed */
+      font-family: Arial, sans-serif;
+    }
+
+    .legend {
+      all: unset; /* Reset styles for the button */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .arrow {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .arrow svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    /* Rotate arrow when expanded */
+    .arrow[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+
+    /* Options list (initially hidden) */
+    .options {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+      position: absolute;
+      width: 100%;
+      border: 1px solid black;
+      background: white;
+      z-index: 10;
+    }
+
+    .options li {
+      border-top: 1px solid black; /* Divider between options */
+    }
+
+    .options a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .options a:hover {
+      background: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="select-link-widget">
+    <button class="legend" aria-expanded="false">
+      What are you looking for?
+      <span class="arrow" aria-expanded="false">
+		<svg class="autocomplete__dropdown-arrow-down" style="top: 8px;" viewBox="0 0 512 512">
+		  <path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z" fill="currentColor" />
+		</svg>
+      </span>
+    </button>
+    <ul class="options">
+      <li><a href="link1.html">First option</a></li>
+      <li><a href="link2.html">Second choice here</a></li>
+      <li><a href="link3.html">Another item</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const widget = document.querySelector(".select-link-widget");
+      const legend = widget.querySelector(".legend");
+      const arrow = legend.querySelector(".arrow");
+      const options = widget.querySelector(".options");
+
+      // Toggle dropdown on click
+      legend.addEventListener("click", () => {
+        const expanded = options.style.display === "block";
+        options.style.display = expanded ? "none" : "block";
+        arrow.setAttribute("aria-expanded", !expanded);
+        legend.setAttribute("aria-expanded", !expanded);
+      });
+
+      // Close dropdown on outside click or Escape key
+      document.addEventListener("click", (event) => {
+        if (!widget.contains(event.target)) {
+          options.style.display = "none";
+          arrow.setAttribute("aria-expanded", "false");
+          legend.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          options.style.display = "none";
+          arrow.setAttribute("aria-expanded", "false");
+          legend.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
