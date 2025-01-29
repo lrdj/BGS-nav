@@ -20,3 +20,10 @@
   }
 }
 
+.slw-options, button.slw-legend {
+  font-size: 1em;
+  // Use a GOV.UK Design System media query to increase padding on larger screens
+  @include govuk-media-query("tablet") {
+  font-size: 1.5em;
+  }
+}
